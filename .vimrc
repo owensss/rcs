@@ -27,3 +27,4 @@ map <leader>tn :tabnew<cr>
 map <leader>te :tabedit<cr>
 hi statusLine cterm=bold ctermfg=yellow ctermbg=blue
 set guifont=DejaVu\ Sans\ Mono\ 9
+set ruler
