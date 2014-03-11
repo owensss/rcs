@@ -21,8 +21,8 @@ PROMPT=$(echo "$CYAN%n@$YELLOW%M:$GREEN%/$_YELLOW\n>$FINISH ")
 #$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW>>>$FINISH ")
 #标题栏、任务栏样式{{{
 case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)
-precmd () { print -Pn "\e]0;-zsh %/\a" }
-preexec () { print -Pn "\e]0;-zsh %/>\ $1\a" }
+precmd () { print -Pn "\e]0;%n@%M//%/\a" }
+preexec () { print -Pn "\e]0;%n@%M//%/\ $1\a" }
 ;;
 esac
 #}}}
@@ -64,6 +64,9 @@ setopt AUTO_CD
 #扩展路径
 #/v/c/p/p => /var/cache/pacman/pkg
 setopt complete_in_word
+ 
+#禁用 core dumps
+limit coredumpsize 0
  
 #Emacs风格 键绑定
 bindkey -e
@@ -295,10 +298,10 @@ setopt extended_glob
      done
  }
   
-# export LANG="en_US.UTF-8"
-# export PATH=$PATH:~/Qt5/qtbase/bin
+export LANG="en_US.UTF-8"
+export PATH=$PATH:~/Qt5/qtbase/bin
 
-# PATH=:$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-# source ~/.rvm/scripts/rvm
-# export PKG_CONFIG_PATH="/opt/local/lib/pkgconfig:$PKG_CONFIG_PATH"
-# export LC_CTYPE="utf-8"
+PATH=:$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
+export PKG_CONFIG_PATH="/opt/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LC_CTYPE="utf-8"

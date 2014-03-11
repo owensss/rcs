@@ -204,7 +204,7 @@ alias ls="ls --color=auto"
 alias cd..="cd .."
 alias ll="ls -l"
 alias cd.="cd ,"
-PROMPT='%B%F{yellow}%T%f %F{blue}%(?..%? )%(1j.[%j&] .)%f%F{cyan}%n%f %F{red}%#%f%b '
+#PROMPT='%B%F{yellow}%T%f %F{blue}%(?..%? )%(1j.[%j&] .)%f%F{cyan}%n%f %F{red}%#%f%b '
 shopt -s autocd extglob cdspell checkjobs
 LGREEN='\[\033[1;32m\]'
 GREEN='\[\033[0;32m\]'
@@ -215,11 +215,11 @@ BLUE='\[\033[0;34m\]'
 CYAN='\[\033[0;36m\]'
 YELLOW='\[\033[1;33m\]'
 NORMAL='\[\033[00m\]'
-PS1="${NORMAL}(${YELLOW}\w${NORMAL})${CYAN}[\$(date +%T)]${BRED}\n\$ ${BBLUE}"
-# PS1="#"
+#PS1="${NORMAL}(${YELLOW}\w${NORMAL})${CYAN}[\$(date +%T)]${BRED}\n\$ ${BBLUE}"
+PS1="#"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibusROMPT_COMMAND='RET=$?; echo -n "[$RET]"'
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# source ~/.rvm/scripts/rvm
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
